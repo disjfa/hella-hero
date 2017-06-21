@@ -1,0 +1,28 @@
+.box {
+  box-shadow: 0 1px 8px #E2E5E6;
+  background: #fff;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin: $gutter-width;
+  padding: $gutter-width;
+  border: 1px solid pink;
+  border-radius: $default-radius;
+  padding-left: 117px;
+  @media screen and (min-width: 800px) {
+    padding-left: 195px;
+  }
+  &__img {
+    position: absolute;
+    width: 87px;
+    padding: 17px 0;
+    left: 15px;
+
+    @media screen and (min-width: 800px) {
+      width: 105px;
+      padding: 26px 0;
+      left: 45px;
+    }
+  }
+}

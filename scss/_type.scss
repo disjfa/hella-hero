@@ -1,0 +1,52 @@
+html {
+  line-height: $line-height-base; /* 1 */
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: $font-family;
+  color: #9b9b9b;
+}
+
+a {
+  color: #007D46;
+}
+
+h1, h2, h3 {
+  color: $headings-color;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+  @media screen and (min-width: $default-breakpoint) {
+    font-size: 27px;
+  }
+}
+
+h2 {
+  font-size: 21px;
+  text-align: center;
+  @media screen and (min-width: $default-breakpoint) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  @media screen and (min-width: $default-breakpoint) {
+    font-size: 21px;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0 0 $gutter-width;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}

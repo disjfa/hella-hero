@@ -1,0 +1,15 @@
+.row {
+  margin: 0 auto;
+  max-width: $default-max-width;
+}
+
+@media screen and (min-width: 800px) {
+  .row {
+    margin: 0;
+    max-width: 100%;
+    display: flex;
+    &__col {
+      flex: 1;
+    }
+  }
+}
