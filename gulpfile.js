@@ -6,6 +6,7 @@ const collections = require('metalsmith-collections');
 const webserver = require('gulp-webserver');
 const sass = require('gulp-sass');
 const permalinks = require('metalsmith-permalinks');
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('default', ['metalsmith', 'sass', 'webserver', 'watch']);
 
@@ -49,4 +50,9 @@ gulp.task('webserver', () => {
       livereload: true,
       open: true,
     }));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
