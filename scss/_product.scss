@@ -1,38 +1,52 @@
 .selector {
   background: #f9fcfd;
   border-bottom: 2px solid #979797;
-  padding-top: $gutter-width;
-  padding-bottom: $gutter-width;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  @media screen and (min-width: $default-breakpoint) {
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
 }
 
 .product {
-  cursor: pointer;
   background: #f9fcfd;
-  display: block;
   border-radius: $default-radius;
-  margin: $gutter-width;
   border: 1px solid #dae2e5;
+  cursor: pointer;
+  display: block;
+  margin: ($gutter-width*3) $gutter-width;
+  padding-bottom: 25px;
+  position: relative;
+  transition: all .3s ease-in-out;
+  .product__heading {
+    transition: height .3s ease-in-out;
+  }
   @media screen and (min-width: $default-breakpoint) {
-    margin: 40px $gutter-width $gutter-width $gutter-width;
+    margin: (30px+$gutter-width) $gutter-width $gutter-width $gutter-width;
   }
   &__heading {
-    margin: -1px;
-    border-radius: $default-radius $default-radius 0 0;
-    height: 70px;
     background-position: center;
     background-size: cover;
+    border-radius: $default-radius $default-radius 0 0;
+    height: 70px;
+    margin: -1px;
     @media screen and (min-width: $default-breakpoint) {
       height: 110px;
     }
   }
   &__body {
-    padding: $gutter-width;
+    padding: 25px 16px 16px 54px;
+    &--radio {
+      left: 12px;
+      position: absolute;
+    }
   }
 
   &.product_active {
-    border-color: #0099dc;
     background: #fff;
-    box-shadow: 0 0 1px 1px #0099dc;
+    border-color: #0099dc;
+    box-shadow: 0 0 3px 1px #0099dc;
 
     @media screen and (min-width: $default-breakpoint) {
       margin: $gutter-width;

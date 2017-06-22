@@ -1,28 +1,63 @@
 .box {
-  box-shadow: 0 1px 8px #E2E5E6;
   background: #fff;
+  border-radius: $default-radius;
+  border: 1px solid pink;
+  box-shadow: 0 1px 8px #e2e5e6;
   cursor: pointer;
   display: block;
-  overflow: hidden;
-  position: relative;
   margin: $gutter-width;
-  padding: $gutter-width;
-  border: 1px solid pink;
-  border-radius: $default-radius;
-  padding-left: 117px;
+  overflow: hidden;
+  padding: 16px 15px;
+  position: relative;
   @media screen and (min-width: 800px) {
-    padding-left: 195px;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    padding: 36px 38px 23px 195px;
+    background-image: url(../assets/boks-live.svg);
+    background-repeat: no-repeat;
+    background-size: 105px;
+    background-position: 45px 26px;
+  }
+  &__info {
+    background-image: url(../assets/boks-live.svg);
+    background-repeat: no-repeat;
+    background-size: 87px;
+    margin-bottom: 20px;
+    padding: 20px 0 0 110px;
+    @media screen and (min-width: 800px) {
+      padding: 0;
+      background-image: none;
+    }
+  }
+  &__choice {
+    align-items: center;
+    display: flex;
+    padding-bottom: 10px;
+    &--label {
+      color: #666;
+      padding: 0 10px;
+    }
   }
   &__img {
+    left: 15px;
+    padding: 17px 0;
     position: absolute;
     width: 87px;
-    padding: 17px 0;
-    left: 15px;
 
     @media screen and (min-width: 800px) {
-      width: 105px;
-      padding: 26px 0;
       left: 45px;
+      padding: 26px 0;
+      width: 105px;
+    }
+  }
+  &__price {
+    position: absolute;
+    right: 10px;
+    bottom: 16px;
+    @media screen and (min-width: 800px) {
+      position: relative;
     }
   }
 }

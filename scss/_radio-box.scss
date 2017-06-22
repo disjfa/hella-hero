@@ -18,4 +18,12 @@
       display: block;
     }
   }
+  &.radio-box_small {
+    width: 20px;
+    height: 20px;
+    .radio-box__img {
+      width: 14px;
+      height: 14px;
+    }
+  }
 }
