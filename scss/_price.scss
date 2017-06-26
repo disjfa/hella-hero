@@ -1,33 +1,38 @@
 .price {
   align-items: center;
+  display: flex;
   font-size: 14px;
   padding-left: 54px;
-  display: flex;
   @media screen and (min-width: $default-breakpoint) {
     display: block;
-    text-align: center;
     padding-left: 0;
+    text-align: center;
   }
+
   &__label {
     display: inline-block;
   }
+
   &__data {
-    color: #666;
+    color: #666666;
     padding-left: 10px;
     @media screen and (min-width: $default-breakpoint) {
       padding-left: 0;
     }
-    &--euro {
-      display: inline-block;
-      height: 18px;
-    }
-    &--amount {
-      display: inline-block;
-      font-size: 23px;
-      min-width: 30px;
-      text-align: right;
-    }
   }
+
+  &__euro {
+    display: inline-block;
+    height: 18px;
+  }
+
+  &__amount {
+    display: inline-block;
+    font-size: 23px;
+    min-width: 30px;
+    text-align: right;
+  }
+
   &.price_block {
     display: block;
   }

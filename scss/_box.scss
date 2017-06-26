@@ -1,7 +1,7 @@
 .box {
   background: #fff;
+  border: 1px solid #dae2e5;
   border-radius: $default-radius;
-  border: 1px solid pink;
   box-shadow: 0 1px 8px #e2e5e6;
   cursor: pointer;
   display: block;
@@ -11,35 +11,44 @@
   position: relative;
   @media screen and (min-width: 800px) {
     align-items: center;
+    background-image: url('../assets/boks-live.svg');
+    background-position: 45px 26px;
+    background-repeat: no-repeat;
+    background-size: 105px;
     display: flex;
     font-size: 16px;
     justify-content: space-between;
     padding: 36px 38px 23px 195px;
-    background-image: url(../assets/boks-live.svg);
-    background-repeat: no-repeat;
-    background-size: 105px;
-    background-position: 45px 26px;
   }
+
+  &_active {
+    border-color: $color-blue;
+    box-shadow: 0 0 3px 1px $color-blue;
+  }
+
   &__info {
-    background-image: url(../assets/boks-live.svg);
+    background-image: url('../assets/boks-live.svg');
     background-repeat: no-repeat;
     background-size: 87px;
     margin-bottom: 20px;
     padding: 20px 0 0 110px;
     @media screen and (min-width: 800px) {
-      padding: 0;
       background-image: none;
+      padding: 0;
     }
   }
+
   &__choice {
     align-items: center;
     display: flex;
     padding-bottom: 10px;
-    &--label {
+
+    &-label {
       color: #666;
       padding: 0 10px;
     }
   }
+
   &__img {
     left: 15px;
     padding: 17px 0;
@@ -52,10 +61,11 @@
       width: 105px;
     }
   }
+
   &__price {
+    bottom: 16px;
     position: absolute;
     right: 10px;
-    bottom: 16px;
     @media screen and (min-width: 800px) {
       position: relative;
     }

@@ -1,18 +1,20 @@
 html {
-  line-height: $line-height-base; /* 1 */
+  line-height: $line-height-base;
 }
 
 body {
-  font-size: $font-size-base;
+  color: $body-color;
   font-family: $font-family;
-  color: #9b9b9b;
+  font-size: $font-size-base;
 }
 
 a {
-  color: #007d46;
+  color: $link-color;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: $headings-color;
   font-weight: normal;
   margin: 0;
@@ -28,8 +30,8 @@ h1 {
 
 h2 {
   font-size: 21px;
+  padding: 40px 0 16px;
   text-align: center;
-  padding: 16px;
   @media screen and (min-width: $default-breakpoint) {
     font-size: 24px;
   }
@@ -48,8 +50,8 @@ p {
 }
 
 .wrapper {
-  max-width: 924px;
   margin: 0 auto;
+  max-width: 924px;
 }
 
 .text-right {
@@ -61,4 +63,8 @@ p {
   @media screen and (min-width: $default-breakpoint) {
     display: table-row;
   }
+}
+
+img {
+  vertical-align: middle;
 }

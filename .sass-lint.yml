@@ -1,0 +1,11 @@
+files:
+  include: 'scss/**/*.s+(a|c)ss'
+  ignore:
+    - 'scss/_normalize.scss'
+
+rules:
+  class-name-format:
+    - 1
+    - convention: strictbem
+  no-color-literals:
+    - 0

@@ -11,20 +11,22 @@
 
 .product {
   background: #f9fcfd;
-  border-radius: $default-radius;
   border: 1px solid #dae2e5;
+  border-radius: $default-radius;
   cursor: pointer;
   display: block;
-  margin: ($gutter-width*3) $gutter-width;
+  margin: ($gutter-width * 3) $gutter-width;
   padding-bottom: 25px;
   position: relative;
-  transition: all .3s ease-in-out;
+  transition: margin .3s ease-in-out;
+
   .product__heading {
     transition: height .3s ease-in-out;
   }
   @media screen and (min-width: $default-breakpoint) {
-    margin: (30px+$gutter-width) $gutter-width $gutter-width $gutter-width;
+    margin: (30px + $gutter-width) $gutter-width $gutter-width;
   }
+
   &__heading {
     background-position: center;
     background-size: cover;
@@ -35,21 +37,23 @@
       height: 110px;
     }
   }
+
   &__body {
     padding: 25px 16px 16px 54px;
-    &--radio {
-      left: 12px;
-      position: absolute;
-    }
+  }
+
+  &__radio {
+    left: 12px;
+    position: absolute;
   }
 
   &.product_active {
     background: #fff;
-    border-color: #0099dc;
-    box-shadow: 0 0 3px 1px #0099dc;
-
+    border-color: $color-blue;
+    box-shadow: 0 0 3px 1px $color-blue;
     @media screen and (min-width: $default-breakpoint) {
       margin: $gutter-width;
+
       .product__heading {
         height: 140px;
       }

@@ -7,6 +7,10 @@ const webserver = require('gulp-webserver');
 const sass = require('gulp-sass');
 const permalinks = require('metalsmith-permalinks');
 const ghPages = require('gulp-gh-pages');
+const sassLint = require('gulp-sass-lint');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 gulp.task('default', ['metalsmith', 'sass', 'webserver', 'watch']);
 
@@ -25,7 +29,7 @@ gulp.task('metalsmith', () => {
         markdown(),
         permalinks(),
         collections({
-          pages: { },
+          pages: {},
         }),
         layouts({ engine: 'handlebars' }),
       ],
@@ -33,9 +37,24 @@ gulp.task('metalsmith', () => {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('sass', () => gulp.src('./scss/index.scss')
+gulp.task('sass', () => {
+  const processors = [
+    autoprefixer,
+    cssnano,
+  ];
+
+  return gulp.src('./scss/index.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./src/css')));
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./src/css'));
+});
+
+gulp.task('sass-lint', () => gulp.src('./scss/**/*.s+(a|c)ss')
+  .pipe(sassLint({
+    configFile: '.sass-lint.yml',
+  }))
+  .pipe(sassLint.format())
+  .pipe(sassLint.failOnError()));
 
 gulp.task('watch', () => {
   gulp.watch(['src/**', 'layouts/**'], ['metalsmith']);
@@ -52,7 +71,5 @@ gulp.task('webserver', () => {
     }));
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages());
-});
+gulp.task('deploy', () => gulp.src('./build/**/*')
+  .pipe(ghPages()));

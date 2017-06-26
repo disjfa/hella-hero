@@ -5,9 +5,10 @@
 
 @media screen and (min-width: 800px) {
   .row {
+    display: flex;
     margin: 0;
     max-width: 100%;
-    display: flex;
+
     &__col {
       flex: 1;
     }
