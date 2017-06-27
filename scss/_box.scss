@@ -1,4 +1,4 @@
-.box {
+.c-box {
   background: #fff;
   border: 1px solid #dae2e5;
   border-radius: $default-radius;
@@ -9,6 +9,7 @@
   overflow: hidden;
   padding: 16px 15px;
   position: relative;
+  transition: box-shadow .3s ease-in-out;
   @media screen and (min-width: 800px) {
     align-items: center;
     background-image: url('../assets/boks-live.svg');
@@ -19,11 +20,6 @@
     font-size: 16px;
     justify-content: space-between;
     padding: 36px 38px 23px 195px;
-  }
-
-  &_active {
-    border-color: $color-blue;
-    box-shadow: 0 0 3px 1px $color-blue;
   }
 
   &__info {
@@ -69,5 +65,10 @@
     @media screen and (min-width: 800px) {
       position: relative;
     }
+  }
+
+  &.is-active {
+    border-color: $color-blue;
+    box-shadow: 0 0 3px 1px $color-blue;
   }
 }

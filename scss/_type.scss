@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-  font-size: 21px;
+  font-size: 18px;
   padding: 40px 0 16px;
   text-align: center;
   @media screen and (min-width: $default-breakpoint) {
@@ -39,6 +39,7 @@ h2 {
 
 h3 {
   font-size: 18px;
+  font-family: 'Dax-Bold' $font-family;
   @media screen and (min-width: $default-breakpoint) {
     font-size: 21px;
   }

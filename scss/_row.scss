@@ -1,6 +1,7 @@
 .row {
   margin: 0 auto;
   max-width: $default-max-width;
+  padding: 0 10px 10px;
 }
 
 @media screen and (min-width: 800px) {

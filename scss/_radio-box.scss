@@ -1,4 +1,4 @@
-.radio-box {
+.o-radio-box {
   background: #fff;
   border: 2px solid #dcdad8;
   border-radius: 4px;
@@ -17,16 +17,16 @@
     opacity: .001;
     position: absolute;
 
-    &:checked + .radio-box__img {
+    &:checked + .o-radio-box__img {
       display: block;
     }
   }
 
-  &.radio-box_small {
+  &.is-small {
     height: 20px;
     width: 20px;
 
-    .radio-box__img {
+    .o-radio-box__img {
       height: 14px;
       width: 14px;
     }

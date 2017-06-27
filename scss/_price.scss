@@ -1,4 +1,4 @@
-.price {
+.o-price {
   align-items: center;
   display: flex;
   font-size: 14px;
@@ -16,6 +16,7 @@
   &__data {
     color: #666;
     padding-left: 10px;
+    font-family: 'Dax-Medium' $font-family;
     @media screen and (min-width: $default-breakpoint) {
       padding-left: 0;
     }

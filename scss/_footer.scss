@@ -1,4 +1,4 @@
-.footer {
+.c-footer {
   display: flex;
   font-size: 16px;
   margin: $gutter-width;
@@ -38,4 +38,8 @@
       font-weight: normal;
     }
   }
+}
+
+.t-medium {
+  font-family: 'Dax-Medium' $font-family;
 }
