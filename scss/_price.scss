@@ -15,8 +15,8 @@
 
   &__data {
     color: #666;
-    padding-left: 10px;
     font-family: 'Dax-Medium' $font-family;
+    padding-left: 10px;
     @media screen and (min-width: $default-breakpoint) {
       padding-left: 0;
     }

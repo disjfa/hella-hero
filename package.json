@@ -4,7 +4,9 @@
   "description": "Base spec app",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "lint": "gulp sass-lint",
+    "deploy": "gulp deply"
   },
   "author": "disjfa <disjfa@disjfa.nl",
   "license": "MIT",
