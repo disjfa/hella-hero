@@ -1,14 +1,18 @@
 $(function () {
-  $('.product').on('click', 'input', function (evt) {
-    $(evt.delegateTarget).siblings().removeClass('product_active');
-    $(evt.delegateTarget).addClass('product_active');
+  $('.js-product').on('click', 'input', function (evt) {
+    $(evt.delegateTarget).siblings().removeClass('is-active');
+    $(evt.delegateTarget).addClass('is-active');
   });
 
-  $('.box').on('click', 'input', function (evt) {
+  $('.js-box').on('click', 'input', function (evt) {
     if(evt.currentTarget.checked) {
-      $(evt.delegateTarget).addClass('box_active');
+      $(evt.delegateTarget).addClass('is-active');
     } else {
-      $(evt.delegateTarget).removeClass('box_active');
+      $(evt.delegateTarget).removeClass('is-active');
     }
+  });
+
+  $('.js-return').on('click', function() {
+    return false;
   });
 })
