@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "lint": "gulp sass-lint",
-    "deploy": "gulp deply"
+    "deploy": "gulp deploy"
   },
   "author": "disjfa <disjfa@disjfa.nl",
   "license": "MIT",
