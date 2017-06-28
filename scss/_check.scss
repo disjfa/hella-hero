@@ -66,7 +66,7 @@
 }
 
 @media screen and (min-width: $default-breakpoint) {
-  .product_active {
+  .is-active {
     .check__label {
       opacity: 1;
     }
