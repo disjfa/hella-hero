@@ -6,149 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Hello! &ndash; Spec app</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
-<div class="c-selector">
-    <div class="wrapper">
-        <h2>Kies uit onze bronnen</h2>
-        <div class="row">
-            <label for="product-groen-uit-nederland" class="c-product js-product row__col">
-                <div class="c-product__heading" style="background-image: url(assets/product-groen-uit-nederland.png)">
 
-                </div>
-                <div class="c-product__body">
-                    <div class="o-radio-box c-product__radio">
-                        <input type="radio" name="product" value="groen-uit-nederland" id="product-groen-uit-nederland" class="o-radio-box__radio">
-                        <img src="assets/icon-checkmark-blue.svg" alt="" class="o-radio-box__img">
-                    </div>
-                    <h3>Groen uit Nederland</h3>
-                    <p>50% groene stroom uit biovergisters, 50% uit windmolens en bosgecompenseerd gas <a href="#" class="js-return t-inline-block" data-balloon="Informatie!" data-balloon-pos="up"><img src="assets/icon-info.svg" alt="Hier kan je informatie zetten!" class="img-middle"></a></p>
-                </div>
-                <div class="o-price">
-                    <div class="o-price__label">Maandelijks</div>
-                    <div class="o-price__data">
-                        <img src="assets/euro-symbol.svg" alt="Euro" class="o-price__euro">
-                        <span class="o-price__amount">105</span><span class="o-price__cents">,90</span>
-                    </div>
-                </div>
-            </label>
-            <label for="product-wind-uit-nederland" class="c-product js-product row__col is-active">
-                <div class="check c-product__check">
-                    <div class="check__label">
-                        <div class="check__label-text">
-                            Meest gekozen
-                        </div>
-                        <img src="assets/arrow.svg" alt="">
-                    </div>
-                    <div class="check__box">
-                        <div class="check__inner">
+<h1 class="text-center bg-inverse text-white py-3">Hela hero</h1>
+<div class="container">
+    <h2>Introduction</h2>
+    <p class="lead">
+        Hero blocks css, i made this when asked one day. I liked them and wanted to share them so i cleaned the code and here we are. Now you can use these, awesome!
+    </p>
+    <h2>Instalation</h2>
+    <p>
+        <code>npm install hella-hero</code>
+    </p>
+    <h2>Example</h2>
+    <div class="hella-row">
+        <div class="hella-item js-hella-item hella-row__col">
+            <div class="hella-item__heading" style="background-image: url(assets/aaron-burden-30649.jpg)">
 
-                        </div>
-                        <img src="assets/icon-checkmark-white.svg" alt="" class="check__checkmark">
-                    </div>
-                </div>
-                <div class="c-product__heading" style="background-image: url(assets/product-wind-uit-nederland.png)">
-
-                </div>
-                <div class="c-product__body">
-                    <div class="o-radio-box c-product__radio">
-                        <input type="radio" name="product" value="wind-uit-nederland" id="product-wind-uit-nederland" class="o-radio-box__radio" checked>
-                        <img src="assets/icon-checkmark-blue.svg" alt="" class="o-radio-box__img">
-                    </div>
-
-                    <h3>Wind uit Nederland</h3>
-                    <p>100% groene stroom uit Nederlandse windmolens en bosgecompenseerd gas <a href="#" class="js-return t-inline-block" data-balloon="Informatie!" data-balloon-pos="up"><img src="assets/icon-info.svg" alt="Hier kan je informatie zetten!" class="img-middle"></a></p>
-                </div>
-                <div class="o-price">
-                    <div class="o-price__label">Maandelijks</div>
-                    <div class="o-price__data">
-                        <img src="assets/euro-symbol.svg" alt="Euro" class="o-price__euro">
-                        <span class="o-price__amount">105</span><span class="o-price__cents">,90</span>
-                    </div>
-                </div>
-            </label>
-            <label for="product-biomassa-uit-nederland" class="c-product js-product row__col">
-                <div class="c-product__heading" style="background-image: url(assets/product-biomassa-uit-nederland.png)">
-
-                </div>
-                <div class="c-product__body">
-                    <div class="o-radio-box c-product__radio">
-                        <input type="radio" name="product" value="biomassa-uit-nederland" id="product-biomassa-uit-nederland" class="o-radio-box__radio">
-                        <img src="assets/icon-checkmark-blue.svg" alt="" class="o-radio-box__img">
-                    </div>
-                    <h3>Biomassa uit Nederland</h3>
-                    <p>100% groene stroom uit Nederlandse biovergisters en bosgecompenseerd gas <a href="#" class="js-return t-inline-block" data-balloon="Informatie!" data-balloon-pos="up"><img src="assets/icon-info.svg" alt="Hier kan je informatie zetten!" class="img-middle"></a></p>
-                </div>
-                <div class="o-price">
-                    <div class="o-price__label">Maandelijks</div>
-                    <div class="o-price__data">
-                        <img src="assets/euro-symbol.svg" alt="Euro" class="o-price__euro">
-                        <span class="o-price__amount">105</span><span class="o-price__cents">,90</span>
-                    </div>
-                </div>
-
-            </label>
-        </div>
-    </div>
-    <div class="wrapper">
-        <h2>Handige extra’s</h2>
-        <div class="row">
-            <label class="c-box row__col js-box" for="boks-live">
-                <div class="c-box__data">
-                    <div class="c-box__info">
-                        <h3>BOKS live</h3>
-                        <div>
-                            Bespaar tot 15% op je verbuik met Boks
-                        </div>
-                        <div>
-                            Eenmalige kosten: <img src="assets/euro-symbol.svg" alt=""> 50,- <a href="#" class="js-return t-inline-block" data-balloon="Informatie!" data-balloon-pos="up"><img src="assets/icon-info.svg" alt="Hier kan je informatie zetten!" class="img-middle"></a>
-                        </div>
-                    </div>
-                    <div class="c-box__choice">
-                        <div class="o-radio-box is-small">
-                            <input type="checkbox" name="boks-live" value="yes" id="boks-live" class="o-radio-box__radio">
-                            <img src="assets/icon-checkmark-blue.svg" alt="" class="o-radio-box__img">
-                        </div>
-                        <div class="c-box__choice-label">Ja, ik wil BOKS live</div>
-                    </div>
-                </div>
-                <div class="o-price price_block box__price">
-                    <div class="o-price__label">Maandelijks</div>
-                    <div class="o-price__data">
-                        <img src="assets/euro-symbol.svg" alt="Euro" class="o-price__euro">
-                        <span class="o-price__amount">2</span><span class="o-price__cents">,-</span>
-                    </div>
-                </div>
-            </label>
-        </div>
-    </div>
-</div>
-<div class="wrapper">
-    <div class="row">
-        <footer class="c-footer row__col">
-            <div class="c-footer__info">
-                <table>
-                    <tr class="hidden-sm-table-row">
-                        <th>Per maand</th>
-                        <th><img src="assets/euro-symbol.svg" alt="euro"></th>
-                        <th class="text-right">110,-</th>
-                    </tr>
-                    <tr>
-                        <td>Per jaar</td>
-                        <td><img src="assets/euro-symbol.svg" alt="euro"></td>
-                        <td class="text-right">1.320,-</td>
-                    </tr>
-                </table>
-                <a href="#" class="js-return t-medium">Tarievenspecificatie</a>
             </div>
-            <button type="submit" class="c-footer__button">
-                Aanmelden &raquo;
-            </button>
-        </footer>
+            <div class="hella-item__body">
+                <h3>Duis suscipit</h3>
+                <p>Duis in mollis magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="hella-item js-hella-item hella-row__col is-active">
+            <div class="hella-item__heading" style="background-image: url(assets/aaron-burden-32942.jpg)">
+
+            </div>
+            <div class="hella-item__body">
+                <h3>Aliquam eget ultricies metus</h3>
+                <p>Fusce lobortis arcu nec nisi pulvinar, ac scelerisque nisl vestibulum.</p>
+            </div>
+        </div>
+        <div class="hella-item js-hella-item hella-row__col">
+            <div class="hella-item__heading" style="background-image: url(assets/derek-truninger-41783.jpg)">
+
+            </div>
+            <div class="hella-item__body">
+                <h3>In efficitur lectus</h3>
+                <p>Ut interdum ipsum justo. Donec nec nisl venenatis, pretium justo vel, semper augue.</p>
+            </div>
+        </div>
     </div>
+    <br>
+    <h2>Use a form, just because we can</h2>
+    <div class="hella-row">
+        <label for="item-for-use-1" class="hella-item js-hella-item-input hella-row__col">
+            <div class="hella-item__heading" style="background-image: url(assets/derek-truninger-41783.jpg)">
+
+            </div>
+            <div class="hella-item__body">
+                <h3>Duis suscipit</h3>
+                <p>
+                    <input type="radio" name="item-for-user" id="item-for-use-1">
+                    Duis in mollis magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </label>
+        <label for="item-for-use-2" class="hella-item js-hella-item-input hella-row__col is-active">
+            <div class="hella-item__heading" style="background-image: url(assets/aaron-burden-30649.jpg)">
+
+            </div>
+            <div class="hella-item__body">
+                <h3>Aliquam eget ultricies metus</h3>
+                <p>
+                    <input type="radio" name="item-for-user" id="item-for-use-2" checked>
+                    Fusce lobortis arcu nec nisi pulvinar, ac scelerisque nisl vestibulum.
+                </p>
+            </div>
+        </label>
+        <label for="item-for-use-3" class="hella-item js-hella-item-input hella-row__col">
+            <div class="hella-item__heading" style="background-image: url(assets/aaron-burden-32942.jpg)">
+
+            </div>
+            <div class="hella-item__body">
+                <h3>In efficitur lectus</h3>
+                <p>
+                    <input type="radio"name="item-for-user" id="item-for-use-3">
+                    Ut interdum ipsum justo. Donec nec nisl venenatis, pretium justo vel, semper augue.
+                </p>
+            </div>
+        </label>
+    </div>
+    <br>
+    <h2>We are using</h2>
+    <ul>
+        <li>
+            Photo by <a href="https://unsplash.com/photos/11U6h85yJ9U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </li>
+        <li>
+            Photo by <a href="https://unsplash.com/photos/ksX0lmup0w4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </li>
+        <li>
+            Photo by <a href="https://unsplash.com/photos/c3qvF4WR0Rw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Derek Truninger</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </li>
+    </ul>
 </div>
 </body>
 </html>
