@@ -1,12 +1,12 @@
-.row {
+.hella-row {
   margin: 0 auto;
-  max-width: $default-max-width;
+  max-width: $hella-row-max-width;
 }
 
-@media screen and (min-width: 800px) {
-  .row {
+@media screen and (min-width: $hella-breakpoint) {
+  .hella-row {
     display: flex;
-    margin: 0;
+    margin: $hella-item-gutter-width (-$hella-item-gutter-width);
     max-width: 100%;
 
     &__col {

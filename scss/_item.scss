@@ -1,0 +1,46 @@
+.hella-item {
+  background: $hella-item-background;
+  border: 1px solid $hella-item-border-color;
+  border-radius: $hella-item-radius;
+  cursor: pointer;
+  display: block;
+  margin: ($hella-item-gutter-width * 3) $hella-item-gutter-width;
+  position: relative;
+  transition: margin .3s ease-in-out, box-shadow .3s ease-in-out, background .3s ease-in-out;
+
+  @media screen and (min-width: $hella-breakpoint) {
+    margin: ($hella-item-heading-margin + $hella-item-gutter-width) $hella-item-gutter-width $hella-item-gutter-width;
+  }
+
+  &__heading {
+    background-position: center;
+    background-size: cover;
+    border-radius: $hella-item-radius $hella-item-radius 0 0;
+    height: $hella-item-heading-height-sm;
+    margin: -1px;
+    transition: height .3s ease-in-out;
+    @media screen and (min-width: $hella-breakpoint) {
+      height: $hella-item-heading-height;
+    }
+  }
+
+  &__body {
+    padding: $hella-item-body-padding;
+  }
+
+  &.is-active {
+    background: $hella-item-background-active;
+    border-color: $hella-item-active-border-color;
+    box-shadow: 0 0 3px 1px $hella-item-active-border-color;
+    .hella-item__heading {
+      height: $hella-item-heading-margin-sm + $hella-item-heading-height-sm;
+    }
+    @media screen and (min-width: $hella-breakpoint) {
+      margin: $hella-item-gutter-width;
+
+      .hella-item__heading {
+        height: $hella-item-heading-margin + $hella-item-heading-height;
+      }
+    }
+  }
+}
